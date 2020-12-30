@@ -22,7 +22,7 @@ end
 % save char_stat u y
 
 %% 2.generowanie danych ucz¹cych i weryfikuj¹cych
-wer1_ucz2 = 2; %parametr do zmiany
+wer1_ucz2 = 1; %parametr do zmiany
 kp = 5; kk = 2000;
 u(1:kp-1)=0; y(1:kp-1)=0;
 x1(1:kp-1)=0; x2(1:kp-1)=0;
