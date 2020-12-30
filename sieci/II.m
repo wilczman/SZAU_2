@@ -1,3 +1,4 @@
+%przed u¿yciem zadeklaruj rêcznie Earx_best = 1000
 %% 2. test modelu
 clearvars -except Earx_best Eoe_best w1_best w10_best w2_best w20_best Earx_ucz Eoe_ucz;
 
