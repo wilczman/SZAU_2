@@ -22,7 +22,7 @@ end
 % save char_stat u y
 
 %% 2.generowanie danych ucz¹cych i weryfikuj¹cych
-wer1_ucz2 = 1; %parametr do zmiany
+wer1_ucz2 = 2; %parametr do zmiany
 kp = 5; kk = 2000;
 u(1:kp-1)=0; y(1:kp-1)=0;
 x1(1:kp-1)=0; x2(1:kp-1)=0;
@@ -48,14 +48,31 @@ for k=kp:kk
     y(k) = g2(x1(k));
 end
 
+%% 2.plot danych ucz¹cych i weryfikuj¹cych
 figure;
 plot(y);xlabel('k');ylabel('y');
 if wer1_ucz2 == 1
     title('Dane weryfikuj¹ce');
     u_wer=u; y_wer=y; 
-%     save dane_wer u_wer y_wer
+    save dane_wer u_wer y_wer
 else
     title('Dane ucz¹ce');
     u_ucz=u; y_ucz=y; 
-%     save dane_ucz u_ucz y_ucz
+    save dane_ucz u_ucz y_ucz
+end
+
+%% 2.zapisz do .txt
+if wer1_ucz2 == 1
+    header1 = 'u';
+    header2 = 'y';
+    fid=fopen('dane_weryfikujace.txt','w');
+    fprintf(fid, '%e %e\r\n', [u(:) y(:)]');
+    fclose(fid);
+end
+if wer1_ucz2 == 2
+    header1 = 'u';
+    header2 = 'y';
+    fid=fopen('dane.txt','w');
+    fprintf(fid, '%e %e\r\n', [u(:) y(:)]');
+    fclose(fid);
 end

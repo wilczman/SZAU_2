@@ -1,3 +1,5 @@
 clear all;
 
-%% 2.
+model;
+
+%% 2. test modelu
