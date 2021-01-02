@@ -22,7 +22,7 @@ title('Charakterystyka statyczna - 200 próbek');
 % save char_stat u y
 
 %% 2.generowanie danych ucz¹cych i weryfikuj¹cych
-wer1_ucz2 = 2; %parametr do zmiany
+wer1_ucz2 = 1; %parametr do zmiany
 kp = 5; kk = 2000;
 u(1:kp-1)=0; y(1:kp-1)=0;
 x1(1:kp-1)=0; x2(1:kp-1)=0;
@@ -41,7 +41,7 @@ for k=5:kk
 end
 figure;
 plot(u);xlabel('nr próbki k');ylabel('sygna³ steruj¹cy u');
-title('Dane ucz¹ce - 2000 próbek');
+title('Sygna³ steruj¹cy - 2000 próbek');
 
 for k=kp:kk
     x1(k) = -alfa1*x1(k-1)+x2(k-1)+beta1*g1(u(k-4));
