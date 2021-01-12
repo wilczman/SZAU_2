@@ -1,4 +1,4 @@
-
+global w10 w1 w20 w2
 %liczba neuronów ukrytych: 8, liczba wejœæ sieci: 4
 %wejœcie 1: u(k-4)
 %wejœcie 2: u(k-5)
